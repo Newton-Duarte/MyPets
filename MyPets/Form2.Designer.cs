@@ -34,7 +34,7 @@
             this.racaCachorro = new System.Windows.Forms.Label();
             this.racaComboBox = new System.Windows.Forms.ComboBox();
             this.lblDescricao = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblDescricaoContent = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.btnSearch = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -80,17 +80,6 @@
             // racaComboBox
             // 
             this.racaComboBox.FormattingEnabled = true;
-            this.racaComboBox.Items.AddRange(new object[] {
-            "Caucasian Shepherd Dog",
-            "Bouvier des Flandres",
-            "Grand Basset Griffon Vendéen",
-            "Hokkaido",
-            "Japanese Terrier",
-            "Hanoverian Scenthound",
-            "Tibetan Spaniel",
-            "Border Collie",
-            "Curly-Coated Retriever",
-            "Skye Terrier"});
             this.racaComboBox.Location = new System.Drawing.Point(332, 122);
             this.racaComboBox.Name = "racaComboBox";
             this.racaComboBox.Size = new System.Drawing.Size(178, 21);
@@ -107,14 +96,14 @@
             this.lblDescricao.TabIndex = 5;
             this.lblDescricao.Text = "Descrição";
             // 
-            // label2
+            // lblDescricaoContent
             // 
-            this.label2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(165, 203);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(462, 166);
-            this.label2.TabIndex = 6;
+            this.lblDescricaoContent.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblDescricaoContent.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDescricaoContent.Location = new System.Drawing.Point(165, 203);
+            this.lblDescricaoContent.Name = "lblDescricaoContent";
+            this.lblDescricaoContent.Size = new System.Drawing.Size(462, 166);
+            this.lblDescricaoContent.TabIndex = 6;
             // 
             // label3
             // 
@@ -132,6 +121,7 @@
             this.btnSearch.TabIndex = 8;
             this.btnSearch.Text = "Buscar";
             this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // BuscarPets
             // 
@@ -140,7 +130,7 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.lblDescricaoContent);
             this.Controls.Add(this.lblDescricao);
             this.Controls.Add(this.racaComboBox);
             this.Controls.Add(this.racaCachorro);
@@ -149,6 +139,7 @@
             this.Controls.Add(this.buscarPetsTitle);
             this.Name = "BuscarPets";
             this.Text = "Buscar Pets";
+            this.Load += new System.EventHandler(this.BuscarPets_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -162,7 +153,7 @@
         private System.Windows.Forms.Label racaCachorro;
         private System.Windows.Forms.ComboBox racaComboBox;
         private System.Windows.Forms.Label lblDescricao;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblDescricaoContent;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnSearch;
     }
